@@ -14,6 +14,12 @@ public class Class {
 
     String name;
 
+    public Class() {
+    }
+
+    public Class(String name) {
+        this.name = name;
+    }
 
     public Long getId() {
         return id;

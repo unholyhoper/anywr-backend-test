@@ -16,6 +16,9 @@ public class Student {
     @JoinColumn(name = "classroom_id")
     private Class classroom;
 
+    public Student() {
+    }
+
     public Long getId() {
         return id;
     }

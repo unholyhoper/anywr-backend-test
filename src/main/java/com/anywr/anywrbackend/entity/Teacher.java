@@ -12,6 +12,14 @@ public class Teacher {
         return id;
     }
 
+    public Teacher() {
+    }
+
+    public Teacher(String firstName, String lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
     @OneToOne
     Class classroom;
 
