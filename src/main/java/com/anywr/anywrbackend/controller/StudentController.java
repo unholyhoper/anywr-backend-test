@@ -32,7 +32,7 @@ public class StudentController {
             @RequestParam(defaultValue = "5") int size) {
         List<Student> students = studentService.findByClassroomNameORTeacherFullName(className, teacherFullName, page, size);
         Collection<StudentDTO> studentDTOS = students.stream()
-                .map(student -> new StudentDTO(student.getFirstName(), student.getLastName())).collect(Collectors.toList());
+                .map(student -> new StudentDTO(student)).collect(Collectors.toList());
         return new ResponseEntity<>(studentDTOS, HttpStatus.OK);
     }
 
